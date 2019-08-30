@@ -1,0 +1,6 @@
+# 代理界面通过engineio.async_drivers导入gevent
+from engineio.async_drivers import gevent
+# async_mode指定为gevent,此gevent为字符串
+socketio = SocketIO(app,async_mode='gevent')
+# 打包指令添加  --hidden-import
+pyinstaller -F  xxx.py  --hidden-import=gevent
